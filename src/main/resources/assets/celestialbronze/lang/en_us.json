@@ -1,0 +1,11 @@
+{
+  "item.celestialbronze.celestial_bronze_sword": "Celestial Bronze Sword",
+  "item.celestialbronze.celestial_bronze_upgrade_smithing_template": "Smithing Template",
+
+  "item.celestialbronze.smithing_template.celestial_bronze_upgrade.applies_to": "Bronze Sword",
+  "item.celestialbronze.smithing_template.celestial_bronze_upgrade.ingredients": "Nether Star",
+  "item.celestialbronze.smithing_template.celestial_bronze_upgrade.base_slot_description": "Add a Bronze Sword",
+  "item.celestialbronze.smithing_template.celestial_bronze_upgrade.additions_slot_description": "Add a Nether Star",
+
+  "upgrade.celestialbronze.celestial_bronze_upgrade": "Celestial Bronze Upgrade"
+}

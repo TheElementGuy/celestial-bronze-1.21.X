@@ -20,22 +20,24 @@ issueTrackerURL="https://github.com/TheElementGuy/more-metals-1.21.4/issues" #op
 [[mods]] #mandatory
 
 # The modid of the mod
-modId="moremetals" #mandatory
+modId="celestialbronze" #mandatory
 
 # The version number of the mod
 version="1.5.0" #mandatory
 
 # A display name for the mod
-displayName="More Metals" #mandatory
+displayName="More Metals: Celestial Bronze" #mandatory
 
 # A URL to query for updates for this mod. See the JSON update specification https://docs.neoforged.net/docs/misc/updatechecker/
-#updateJSONURL="https://change.me.example.invalid/updates.json" #optional
+# updateJSONURL="" #optional
 
 # A URL for the "homepage" for this mod, displayed in the mod UI
 displayURL="https://https://www.curseforge.com/minecraft/mc-mods/theelementguys-more-metals" #optional
 
 # A file name (in the root of the mod JAR) containing a logo for display
 logoFile="logo_scaled.png" #optional
+
+logoBlur=false
 
 # A text field displayed in the mod UI
 credits="Jude Rasmussen, exlinegames (some textures)" #optional
@@ -44,15 +46,11 @@ credits="Jude Rasmussen, exlinegames (some textures)" #optional
 authors="Jude Rasmussen" #optional
 
 # The description text for the mod (multi line!) (#mandatory)
-description='''This is a mod dedicated to adding more materials to Minecraft in a vanilla way. Adding:
-Cubic Zirconia: A very durable material about iron tier found in the overworld.
-Celestial Bronze: By fusing tin, copper, and a nether star, create a mystical material to make into a sword dealing heavy damage to enemies while leaving friends intact.
-Rubidium: Found in the Nether, rubidium can be used to make tools that mine with quick speed and are about as good as netherite.
-Starshard: A material found in the End, a successor to netherite.'''
+description='''This mod is an addon to TheElementGuy's More Metals and Ores that adds celestial bronze to the game. Simply find an upgrade template in a desert temple and add a nether star to a bronze sword.'''
 
 # The [[mixins]] block allows you to declare your mixin config to FML so that it gets loaded.
 #[[mixins]]
-#config="moremetals.mixins.json"
+#config="celestialbronze.mixins.json"
 
 # The [[accessTransformers]] block allows you to declare where your AT file is.
 # If this block is omitted, a fallback attempt will be made to load an AT from META-INF/accesstransformer.cfg
@@ -62,7 +60,7 @@ Starshard: A material found in the End, a successor to netherite.'''
 # The coremods config file path is not configurable and is always loaded from META-INF/coremods.json
 
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
-[[dependencies.moremetals]] #optional
+[[dependencies.celestialbronze]] #optional
 # the modid of the dependency
 modId="neoforge" #mandatory
 # The type of the dependency. Can be one of "required", "optional", "incompatible" or "discouraged" (case insensitive).
@@ -81,7 +79,7 @@ ordering="NONE"
 side="BOTH"
 
 # Here's another dependency
-[[dependencies.moremetals]]
+[[dependencies.celestialbronze]]
 modId="minecraft"
 type="required"
 # This version range declares a minimum of the current minecraft version up to but not including the next major version
@@ -92,5 +90,12 @@ side="BOTH"
 # Features are specific properties of the game environment, that you may want to declare you require. This example declares
 # that your mod requires GL version 3.2 or higher. Other features will be added. They are side aware so declaring this won't
 # stop your mod loading on the server for example.
-#[features.moremetals]
+#[features.celestialbronze]
 #openGLVersion="[3.2,)"
+
+[[dependencies.celestialbronze]]
+modId="moremetals"
+type="required"
+versionRange="[1.5.0,)"
+ordering="AFTER"
+side="BOTH"
