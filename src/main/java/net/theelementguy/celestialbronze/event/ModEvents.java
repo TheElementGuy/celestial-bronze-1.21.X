@@ -19,7 +19,7 @@ import net.theelementguy.celestialbronze.util.ModTags;
 
 import java.util.function.Predicate;
 
-@EventBusSubscriber(modid = CelestialBronzeMod.MOD_ID, bus = EventBusSubscriber.Bus.GAME)
+@EventBusSubscriber(modid = CelestialBronzeMod.MOD_ID)
 public class ModEvents {
 
     //ModItems.CELESTIAL_BRONZE_SWORD.get();

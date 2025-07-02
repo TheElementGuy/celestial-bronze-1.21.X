@@ -59,7 +59,7 @@ public class CelestialBronzeMod {
         modEventBus.addListener(this::addCreative);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
-        modContainer.registerConfig(ModConfig.Type.COMMON, CelestialBronzeModConfig.SPEC);
+        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
@@ -67,12 +67,12 @@ public class CelestialBronzeMod {
         // Some common setup code
         LOGGER.info("HELLO FROM COMMON SETUP");
 
-        if (CelestialBronzeModConfig.logDirtBlock)
+        if (Config.logDirtBlock)
             LOGGER.info("DIRT BLOCK >> {}", BuiltInRegistries.BLOCK.getKey(Blocks.DIRT));
 
-        LOGGER.info(CelestialBronzeModConfig.magicNumberIntroduction + CelestialBronzeModConfig.magicNumber);
+        LOGGER.info(Config.magicNumberIntroduction + Config.magicNumber);
 
-        CelestialBronzeModConfig.items.forEach((item) -> LOGGER.info("ITEM >> {}", item.toString()));
+        Config.items.forEach((item) -> LOGGER.info("ITEM >> {}", item.toString()));
     }
 
     // Add the example block item to the building blocks tab
@@ -95,7 +95,7 @@ public class CelestialBronzeMod {
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
-    @EventBusSubscriber(modid = MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    @EventBusSubscriber(modid = MOD_ID)
     public static class ClientModEvents
     {
         @SubscribeEvent

@@ -6,28 +6,46 @@ import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
-import net.neoforged.neoforge.common.conditions.IConditionBuilder;
-import net.theelementguy.celestialbronze.item.ModItems;
+import net.minecraft.world.level.ItemLike;
+import net.neoforged.fml.common.Mod;
+import net.theelementguy.celestialbronze.util.ModUtil;
+import net.theelementguy.moremetals.MoreMetalsMod;
+import net.theelementguy.moremetals.block.ModBlocks;
+import net.theelementguy.moremetals.item.ModItems;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-import static net.minecraft.data.recipes.ShapedRecipeBuilder.shaped;
-import static net.minecraft.data.recipes.ShapelessRecipeBuilder.shapeless;
+public class ModRecipeProvider extends RecipeProvider {
 
-public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
+    protected ModRecipeProvider(HolderLookup.Provider registries, RecipeOutput output) {
+        super(registries, output);
+    }
 
-    public ModRecipeProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> provider) {
-        super(output, provider);
+    public static class Runner extends RecipeProvider.Runner {
+
+        protected Runner(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> registries) {
+            super(packOutput, registries);
+        }
+
+        @Override
+        protected RecipeProvider createRecipeProvider(HolderLookup.Provider provider, RecipeOutput recipeOutput) {
+            return new ModRecipeProvider(provider, recipeOutput);
+        }
+
+        @Override
+        public String getName() {
+            return "Celestial Bronze Recipes";
+        }
     }
 
     @Override
-    protected void buildRecipes(RecipeOutput output) {
+    protected void buildRecipes() {
 
-        SmithingTransformRecipeBuilder.smithing(Ingredient.of(ModItems.CELESTIAL_BRONZE_UPGRADE_SMITHING_TEMPLATE), Ingredient.of(net.theelementguy.moremetals.item.ModItems.BRONZE_SWORD), Ingredient.of(Items.NETHER_STAR), RecipeCategory.COMBAT, ModItems.CELESTIAL_BRRONZE_SWORD.get()).unlocks("has_ns", has(Items.NETHER_STAR)).save(output, "celestial_bronze_sword_smithing");
+        SmithingTransformRecipeBuilder.smithing(Ingredient.of(net.theelementguy.celestialbronze.item.ModItems.CELESTIAL_BRONZE_UPGRADE_SMITHING_TEMPLATE), Ingredient.of(ModItems.BRONZE_SWORD), Ingredient.of(Items.NETHER_STAR), RecipeCategory.COMBAT, net.theelementguy.celestialbronze.item.ModItems.CELESTIAL_BRRONZE_SWORD.get()).unlocks("has_ns", has(Items.NETHER_STAR)).save(this.output, ModUtil.createRecipeResourceKey("celestial_bronze_sword_smithing"));
 
     }
-
 }

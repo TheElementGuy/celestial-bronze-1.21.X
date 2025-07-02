@@ -5,7 +5,6 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.EntityTypeTagsProvider;
 import net.minecraft.tags.EntityTypeTags;
 import net.minecraft.world.entity.EntityType;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.theelementguy.celestialbronze.CelestialBronzeMod;
 import net.theelementguy.celestialbronze.util.ModTags;
 import org.jetbrains.annotations.Nullable;
@@ -13,8 +12,8 @@ import org.jetbrains.annotations.Nullable;
 import java.util.concurrent.CompletableFuture;
 
 public class ModEntityTypeTagProvider extends EntityTypeTagsProvider {
-    public ModEntityTypeTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> provider, @Nullable ExistingFileHelper existingFileHelper) {
-        super(output, provider, CelestialBronzeMod.MOD_ID, existingFileHelper);
+    public ModEntityTypeTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> provider) {
+        super(output, provider, CelestialBronzeMod.MOD_ID);
     }
 
     @Override
