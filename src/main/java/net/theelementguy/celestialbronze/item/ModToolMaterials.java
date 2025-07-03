@@ -2,7 +2,7 @@ package net.theelementguy.celestialbronze.item;
 
 import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.theelementguy.moremetals.util.ModTags;
+import net.theelementguy.celestialbronze.util.ModTags;
 
 public class ModToolMaterials {
 
