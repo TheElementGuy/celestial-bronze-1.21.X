@@ -1,4 +1,4 @@
-package net.theelementguy.celestialbronze.item.custom;
+package net.theelementguy.mmmythics.item.custom;
 
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.monster.Enemy;
@@ -10,16 +10,5 @@ public class CelestialBronzeSwordItem extends SwordItem {
     public CelestialBronzeSwordItem(Tier tier, Properties properties) {
         super(tier, properties);
     }
-
-    @Override
-    public boolean hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-
-        if (target instanceof Enemy) {
-            //target.kill();
-        }
-
-        return super.hurtEnemy(stack, target, attacker);
-    }
-
 
 }

@@ -14,25 +14,25 @@ loaderVersion="${loader_version_range}" #mandatory
 license="MIT License"
 
 # A URL to refer people to when problems occur with this mod
-issueTrackerURL="https://github.com/TheElementGuy/more-metals-1.21.4/issues" #optional
+issueTrackerURL="https://github.com/TheElementGuy/celestial-bronze-1.21.X/issues" #optional
 
 # A list of mods - how many allowed here is determined by the individual mod loader
 [[mods]] #mandatory
 
 # The modid of the mod
-modId="celestialbronze" #mandatory
+modId="mmmythics" #mandatory
 
 # The version number of the mod
-version="1.5.0" #mandatory
+version="${file.jarVersion}" #mandatory
 
 # A display name for the mod
-displayName="More Metals: Celestial Bronze" #mandatory
+displayName="TheElementGuy's More Metals and Ores: Mythic Metals" #mandatory
 
 # A URL to query for updates for this mod. See the JSON update specification https://docs.neoforged.net/docs/misc/updatechecker/
 # updateJSONURL="" #optional
 
 # A URL for the "homepage" for this mod, displayed in the mod UI
-displayURL="https://https://www.curseforge.com/minecraft/mc-mods/theelementguys-more-metals" #optional
+displayURL="https://www.curseforge.com/minecraft/mc-mods/theelementguys-more-metals-and-ores-celestial" #optional
 
 # A file name (in the root of the mod JAR) containing a logo for display
 logoFile="logo_scaled.png" #optional
@@ -46,7 +46,7 @@ credits="Jude Rasmussen, exlinegames (some textures)" #optional
 authors="Jude Rasmussen" #optional
 
 # The description text for the mod (multi line!) (#mandatory)
-description='''This mod is an addon to TheElementGuy's More Metals and Ores that adds celestial bronze to the game. Simply find an upgrade template in a desert temple and add a nether star to a bronze sword.'''
+description='''This mod is an addon to TheElementGuy's More Metals and Ores that adds celestial bronze to the game. Simply find an upgrade template in a desert temple and add a nether star to a bronze sword. Similarly, the imperial gold sword is made from smithing a nether star to a golden sword. Find the smithing template in bastion remnants.'''
 
 # The [[mixins]] block allows you to declare your mixin config to FML so that it gets loaded.
 #[[mixins]]
@@ -60,7 +60,7 @@ description='''This mod is an addon to TheElementGuy's More Metals and Ores that
 # The coremods config file path is not configurable and is always loaded from META-INF/coremods.json
 
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
-[[dependencies.celestialbronze]] #optional
+[[dependencies.mmmythics]] #optional
 # the modid of the dependency
 modId="neoforge" #mandatory
 # The type of the dependency. Can be one of "required", "optional", "incompatible" or "discouraged" (case insensitive).
@@ -79,7 +79,7 @@ ordering="NONE"
 side="BOTH"
 
 # Here's another dependency
-[[dependencies.celestialbronze]]
+[[dependencies.mmmythics]]
 modId="minecraft"
 type="required"
 # This version range declares a minimum of the current minecraft version up to but not including the next major version
@@ -93,7 +93,7 @@ side="BOTH"
 #[features.celestialbronze]
 #openGLVersion="[3.2,)"
 
-[[dependencies.celestialbronze]]
+[[dependencies.mmmythics]]
 modId="moremetals"
 type="required"
 versionRange="[1.5.0,)"

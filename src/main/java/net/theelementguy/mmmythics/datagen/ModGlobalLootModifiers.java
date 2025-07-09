@@ -1,4 +1,4 @@
-package net.theelementguy.celestialbronze.datagen;
+package net.theelementguy.mmmythics.datagen;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -6,9 +6,9 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.neoforged.neoforge.common.data.GlobalLootModifierProvider;
 import net.neoforged.neoforge.common.loot.LootTableIdCondition;
-import net.theelementguy.celestialbronze.CelestialBronzeMod;
-import net.theelementguy.celestialbronze.item.ModItems;
-import net.theelementguy.celestialbronze.loot.AddItemRollModifier;
+import net.theelementguy.mmmythics.CelestialBronzeMod;
+import net.theelementguy.mmmythics.item.ModItems;
+import net.theelementguy.mmmythics.loot.AddItemRollModifier;
 
 import java.util.concurrent.CompletableFuture;
 

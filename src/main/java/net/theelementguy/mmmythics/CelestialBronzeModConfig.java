@@ -1,4 +1,4 @@
-package net.theelementguy.celestialbronze;
+package net.theelementguy.mmmythics;
 
 import java.util.List;
 import java.util.Set;

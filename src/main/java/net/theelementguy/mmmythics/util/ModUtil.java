@@ -1,4 +1,4 @@
-package net.theelementguy.celestialbronze.util;
+package net.theelementguy.mmmythics.util;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
@@ -6,7 +6,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.level.block.Block;
-import net.theelementguy.celestialbronze.CelestialBronzeMod;
+import net.theelementguy.mmmythics.CelestialBronzeMod;
 
 public class ModUtil {
 

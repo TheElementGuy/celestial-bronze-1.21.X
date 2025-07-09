@@ -1,10 +1,10 @@
-package net.theelementguy.celestialbronze.datagen;
+package net.theelementguy.mmmythics.datagen;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
-import net.theelementguy.celestialbronze.CelestialBronzeMod;
+import net.theelementguy.mmmythics.CelestialBronzeMod;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;

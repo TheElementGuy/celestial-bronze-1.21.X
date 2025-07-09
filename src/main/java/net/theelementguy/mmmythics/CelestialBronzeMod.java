@@ -1,8 +1,7 @@
-package net.theelementguy.celestialbronze;
+package net.theelementguy.mmmythics;
 
-import net.theelementguy.celestialbronze.datagen.DataGenerators;
-import net.theelementguy.celestialbronze.item.ModItems;
-import net.theelementguy.celestialbronze.loot.ModLootModifiers;
+import net.theelementguy.mmmythics.item.ModItems;
+import net.theelementguy.mmmythics.loot.ModLootModifiers;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -28,7 +27,7 @@ import net.neoforged.neoforge.event.server.ServerStartingEvent;
 @Mod(CelestialBronzeMod.MOD_ID)
 public class CelestialBronzeMod {
     // Define mod id in a common place for everything to reference
-    public static final String MOD_ID = "celestialbronze";
+    public static final String MOD_ID = "mmmythics";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
