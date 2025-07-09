@@ -1,13 +1,12 @@
-package net.theelementguy.celestialbronze.datagen;
+package net.theelementguy.mmmythics.datagen;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.EntityTypeTagsProvider;
 import net.minecraft.tags.EntityTypeTags;
 import net.minecraft.world.entity.EntityType;
-import net.theelementguy.celestialbronze.CelestialBronzeMod;
-import net.theelementguy.moremetals.MoreMetalsMod;
-import net.theelementguy.celestialbronze.util.ModTags;
+import net.theelementguy.mmmythics.CelestialBronzeMod;
+import net.theelementguy.mmmythics.util.ModTags;
 
 import java.util.concurrent.CompletableFuture;
 

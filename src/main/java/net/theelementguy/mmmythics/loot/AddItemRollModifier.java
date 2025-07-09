@@ -1,4 +1,4 @@
-package net.theelementguy.celestialbronze.loot;
+package net.theelementguy.mmmythics.loot;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;

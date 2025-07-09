@@ -1,18 +1,14 @@
-package net.theelementguy.celestialbronze.datagen;
+package net.theelementguy.mmmythics.datagen;
 
-import com.jcraft.jorbis.Block;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.tags.TagsProvider;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
-import net.theelementguy.celestialbronze.CelestialBronzeMod;
+import net.theelementguy.mmmythics.CelestialBronzeMod;
 
-import java.util.Collections;
-import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 @EventBusSubscriber(modid = CelestialBronzeMod.MOD_ID)
@@ -36,6 +32,8 @@ public class DataGenerators {
         generator.addProvider(true, new ModModelProvider(output));
 
         generator.addProvider(true, new ModGlobalLootModifiers(output, provider));
+
+        generator.addProvider(true, new ModLanguageProvider(output, "en_us"));
     }
 
 }

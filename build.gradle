@@ -135,8 +135,8 @@ dependencies {
     // implementation project(":myproject")
 
     // Do NOT use 'implementation' for mod dependencies that register content!
-    compileOnly "curse.maven:theelementguys-more-metals-1159383:6723853"
-    localRuntime "curse.maven:theelementguys-more-metals-1159383:6723853"
+    compileOnly "curse.maven:theelementguys-more-metals-1159383:6749248"
+    localRuntime "curse.maven:theelementguys-more-metals-1159383:6749248"
 
 
     // For more info:
