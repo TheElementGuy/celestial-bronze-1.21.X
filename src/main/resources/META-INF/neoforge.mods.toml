@@ -23,7 +23,7 @@ issueTrackerURL="https://github.com/TheElementGuy/celestial-bronze-1.21.X/issues
 modId="mmmythics" #mandatory
 
 # The version number of the mod
-version="${file.jarVersion}" #mandatory
+version="1.1.1" #mandatory
 
 # A display name for the mod
 displayName="TheElementGuy's More Metals and Ores: Mythic Metals" #mandatory
@@ -96,6 +96,6 @@ side="BOTH"
 [[dependencies.mmmythics]]
 modId="tegmoremetals"
 type="required"
-versionRange="[1.5.0,)"
+versionRange="[1.7.0,)"
 ordering="AFTER"
 side="BOTH"
