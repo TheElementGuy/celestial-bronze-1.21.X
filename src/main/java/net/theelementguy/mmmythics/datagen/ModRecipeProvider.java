@@ -9,7 +9,7 @@ import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.theelementguy.mmmythics.util.ModUtil;
-import net.theelementguy.moremetals.item.ModItems;
+import net.theelementguy.tegmoremetals.item.ModItems;
 
 import java.util.concurrent.CompletableFuture;
 

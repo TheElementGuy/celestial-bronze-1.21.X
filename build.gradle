@@ -1,7 +1,7 @@
 plugins {
     id 'java-library'
     id 'maven-publish'
-    id 'net.neoforged.moddev' version '2.0.72'
+    id 'net.neoforged.moddev' version '2.0.103'
     id 'idea'
 }
 
@@ -135,8 +135,7 @@ dependencies {
     // implementation project(":myproject")
 
     // Do NOT use 'implementation' for mod dependencies that register content!
-    compileOnly "curse.maven:theelementguys-more-metals-1159383:6749248"
-    localRuntime "curse.maven:theelementguys-more-metals-1159383:6749248"
+    implementation "curse.maven:theelementguys-more-metals-1159383:6784259"
 
 
     // For more info:
@@ -195,4 +194,13 @@ idea {
         downloadSources = true
         downloadJavadoc = true
     }
+}
+
+tasks.named("jar") {
+
+
+
+    archiveFileName = "[NeoForge ${minecraft_version}] ${mod_name_short} ${mod_version}.jar"
+
+
 }

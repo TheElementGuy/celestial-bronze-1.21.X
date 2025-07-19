@@ -94,8 +94,8 @@ side="BOTH"
 #openGLVersion="[3.2,)"
 
 [[dependencies.mmmythics]]
-modId="moremetals"
+modId="tegmoremetals"
 type="required"
-versionRange="[6.1.0,)"
+versionRange="[7.0.0,)"
 ordering="BEFORE"
 side="BOTH"
