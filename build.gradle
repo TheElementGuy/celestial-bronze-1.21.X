@@ -193,3 +193,12 @@ idea {
         downloadJavadoc = true
     }
 }
+
+tasks.named("jar") {
+
+
+
+    archiveFileName = "[NeoForge ${minecraft_version}] ${mod_name_short} ${mod_version}.jar"
+
+
+}
