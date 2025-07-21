@@ -1,6 +1,7 @@
 package net.theelementguy.mmmythics.loot;
 
 import com.mojang.serialization.MapCodec;
+import cpw.mods.util.LambdaExceptionUtils;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.common.loot.IGlobalLootModifier;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -14,6 +15,8 @@ public class ModLootModifiers {
     public static final DeferredRegister<MapCodec<? extends IGlobalLootModifier>> LOOT_MODIFIER_SERIALIZERS = DeferredRegister.create(NeoForgeRegistries.Keys.GLOBAL_LOOT_MODIFIER_SERIALIZERS, CelestialBronzeMod.MOD_ID);
 
     public static final Supplier<MapCodec<? extends IGlobalLootModifier>> ADD_ITEM_ROLL_MODIFIER = LOOT_MODIFIER_SERIALIZERS.register("add_item_roll_modifier", () -> AddItemRollModifier.CODEC);
+
+    public static final Supplier<MapCodec<? extends IGlobalLootModifier>> EXTRA_ITEM_ROLL_MODIFIER = LOOT_MODIFIER_SERIALIZERS.register("extra_item_modifier", () -> ExtraItemRollModifier.CODEC);
 
     public static void register(IEventBus eventBus) {
         LOOT_MODIFIER_SERIALIZERS.register(eventBus);
