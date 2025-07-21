@@ -1,0 +1,32 @@
+package net.theelementguy.mmmythics.datagen;
+
+import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.data.PackOutput;
+import net.minecraft.data.tags.IntrinsicHolderTagsProvider;
+import net.minecraft.data.tags.TagsProvider;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Block;
+import net.theelementguy.mmmythics.item.ModItems;
+import net.theelementguy.mmmythics.util.ModTags;
+
+import java.util.concurrent.CompletableFuture;
+
+public class ModItemTagProvider extends IntrinsicHolderTagsProvider<Item> {
+
+    public ModItemTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, CompletableFuture<TagsProvider.TagLookup<Block>> blockTags) {
+        super(output, Registries.ITEM, lookupProvider, item -> item.builtInRegistryHolder().key());
+        //this.blockTagProvider = blockTags;
+    }
+
+    @Override
+    protected void addTags(HolderLookup.Provider provider) {
+
+        tag(ItemTags.SWORDS).addTag(ModTags.Items.MONSTER_HUNTING_SWORDS).replace(false);
+        tag(ModTags.Items.MONSTER_HUNTING_SWORDS).add(ModItems.CELESTIAL_BRRONZE_SWORD.get()).add(ModItems.IMPERIAL_GOLD_SWORD.get()).replace(false);
+        tag(ModTags.Items.CELESTIAL_BRONZE_REPAIRABLES).add(Items.NETHER_STAR).replace(false);
+        tag(ModTags.Items.IMPERIAL_GOLD_REPAIRABLES).add(Items.NETHER_STAR).replace(false);
+    }
+}

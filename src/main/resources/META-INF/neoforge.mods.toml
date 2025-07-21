@@ -20,7 +20,7 @@ issueTrackerURL="https://github.com/TheElementGuy/more-metals-1.21.4/issues" #op
 [[mods]] #mandatory
 
 # The modid of the mod
-modId="celestialbronze" #mandatory
+modId="mmmythics" #mandatory
 
 # The version number of the mod
 version="1.5.0" #mandatory
@@ -50,7 +50,7 @@ description='''This mod is an addon to TheElementGuy's More Metals and Ores that
 
 # The [[mixins]] block allows you to declare your mixin config to FML so that it gets loaded.
 #[[mixins]]
-#config="celestialbronze.mixins.json"
+#config="mmmythics.mixins.json"
 
 # The [[accessTransformers]] block allows you to declare where your AT file is.
 # If this block is omitted, a fallback attempt will be made to load an AT from META-INF/accesstransformer.cfg
@@ -60,7 +60,7 @@ description='''This mod is an addon to TheElementGuy's More Metals and Ores that
 # The coremods config file path is not configurable and is always loaded from META-INF/coremods.json
 
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
-[[dependencies.celestialbronze]] #optional
+[[dependencies.mmmythics]] #optional
 # the modid of the dependency
 modId="neoforge" #mandatory
 # The type of the dependency. Can be one of "required", "optional", "incompatible" or "discouraged" (case insensitive).
@@ -79,7 +79,7 @@ ordering="NONE"
 side="BOTH"
 
 # Here's another dependency
-[[dependencies.celestialbronze]]
+[[dependencies.mmmythics]]
 modId="minecraft"
 type="required"
 # This version range declares a minimum of the current minecraft version up to but not including the next major version
@@ -90,12 +90,12 @@ side="BOTH"
 # Features are specific properties of the game environment, that you may want to declare you require. This example declares
 # that your mod requires GL version 3.2 or higher. Other features will be added. They are side aware so declaring this won't
 # stop your mod loading on the server for example.
-#[features.celestialbronze]
+#[features.mmmythics]
 #openGLVersion="[3.2,)"
 
-[[dependencies.celestialbronze]]
-modId="moremetals"
+[[dependencies.mmmythics]]
+modId="tegmoremetals"
 type="required"
-versionRange="[1.5.0,)"
+versionRange="[3.3.0,)"
 ordering="AFTER"
 side="BOTH"
