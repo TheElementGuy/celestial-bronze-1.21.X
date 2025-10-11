@@ -1,5 +1,8 @@
 package net.theelementguy.mmmythics;
 
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.theelementguy.mmmythics.item.ModItems;
 import net.theelementguy.mmmythics.loot.ModLootModifiers;
 import org.slf4j.Logger;
@@ -78,10 +81,12 @@ public class CelestialBronzeMod {
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.CELESTIAL_BRONZE_UPGRADE_SMITHING_TEMPLATE);
+            event.insertAfter(new ItemStack(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE), new ItemStack(ModItems.CELESTIAL_BRONZE_UPGRADE_SMITHING_TEMPLATE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.insertAfter(new ItemStack(ModItems.CELESTIAL_BRONZE_UPGRADE_SMITHING_TEMPLATE.get()), new ItemStack(ModItems.IMPERIAL_GOLD_UPGRADE_SMITHING_TEMPLATE.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
         }
         if (event.getTabKey() == CreativeModeTabs.COMBAT) {
-            event.accept(ModItems.CELESTIAL_BRRONZE_SWORD);
+            event.insertAfter(new ItemStack(net.theelementguy.tegmoremetals.item.ModItems.BRONZE_SWORD.get()), new ItemStack(ModItems.CELESTIAL_BRRONZE_SWORD.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.insertAfter(new ItemStack(Items.GOLDEN_SWORD), new ItemStack(ModItems.IMPERIAL_GOLD_SWORD.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
         }
     }
 

@@ -133,7 +133,7 @@ dependencies {
 
     // Example project dependency using a sister or child project:
     // implementation project(":myproject")
-    implementation "curse.maven:theelementguys-more-metals-1159383:6770348"
+    implementation "curse.maven:theelementguys-more-metals-1159383:6788585"
 
     // For more info:
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html

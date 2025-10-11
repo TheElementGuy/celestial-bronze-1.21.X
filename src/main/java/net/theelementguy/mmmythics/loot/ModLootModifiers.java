@@ -15,6 +15,8 @@ public class ModLootModifiers {
 
     public static final Supplier<MapCodec<? extends IGlobalLootModifier>> ADD_ITEM_ROLL_MODIFIER = LOOT_MODIFIER_SERIALIZERS.register("add_item_roll_modifier", () -> AddItemRollModifier.CODEC);
 
+    public static final Supplier<MapCodec<? extends IGlobalLootModifier>> EXTRA_ITEM_ROLL_MODIFIER = LOOT_MODIFIER_SERIALIZERS.register("extra_item_roll_modifier", () -> ExtraItemRollModifier.CODEC);
+
     public static void register(IEventBus eventBus) {
         LOOT_MODIFIER_SERIALIZERS.register(eventBus);
     }
