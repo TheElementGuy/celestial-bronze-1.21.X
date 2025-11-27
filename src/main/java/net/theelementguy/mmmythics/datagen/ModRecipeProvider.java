@@ -39,7 +39,7 @@ public class ModRecipeProvider extends RecipeProvider {
     @Override
     protected void buildRecipes() {
 
-        SmithingTransformRecipeBuilder.smithing(Ingredient.of(net.theelementguy.mmmythics.item.ModItems.CELESTIAL_BRONZE_UPGRADE_SMITHING_TEMPLATE), Ingredient.of(ModItems.BRONZE_SWORD), Ingredient.of(Items.NETHER_STAR), RecipeCategory.COMBAT, net.theelementguy.mmmythics.item.ModItems.CELESTIAL_BRRONZE_SWORD.get()).unlocks("has_ns", has(Items.NETHER_STAR)).save(this.output, ModUtil.createRecipeResourceKey("celestial_bronze_sword_smithing"));
+        SmithingTransformRecipeBuilder.smithing(Ingredient.of(net.theelementguy.mmmythics.item.ModItems.CELESTIAL_BRONZE_UPGRADE_SMITHING_TEMPLATE), Ingredient.of(Items.COPPER_SWORD), Ingredient.of(Items.NETHER_STAR), RecipeCategory.COMBAT, net.theelementguy.mmmythics.item.ModItems.CELESTIAL_BRRONZE_SWORD.get()).unlocks("has_ns", has(Items.NETHER_STAR)).save(this.output, ModUtil.createRecipeResourceKey("celestial_bronze_sword_smithing"));
 
         SmithingTransformRecipeBuilder.smithing(Ingredient.of(net.theelementguy.mmmythics.item.ModItems.IMPERIAL_GOLD_UPGRADE_SMITHING_TEMPLATE), Ingredient.of(Items.GOLDEN_SWORD), Ingredient.of(Items.NETHER_STAR), RecipeCategory.COMBAT, net.theelementguy.mmmythics.item.ModItems.IMPERIAL_GOLD_SWORD.get()).unlocks("has_ns", has(Items.NETHER_STAR)).save(this.output, ModUtil.createRecipeResourceKey("imperial_gold_sword_smithing"));
 

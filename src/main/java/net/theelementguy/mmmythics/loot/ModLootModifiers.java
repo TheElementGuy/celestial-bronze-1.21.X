@@ -1,7 +1,6 @@
 package net.theelementguy.mmmythics.loot;
 
 import com.mojang.serialization.MapCodec;
-import cpw.mods.util.LambdaExceptionUtils;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.common.loot.IGlobalLootModifier;
 import net.neoforged.neoforge.registries.DeferredRegister;

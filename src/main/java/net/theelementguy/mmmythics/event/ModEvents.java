@@ -31,7 +31,7 @@ public class ModEvents {
             boolean tagMatch = type.getTags().anyMatch(new Predicate<TagKey<EntityType<?>>>() {
                 @Override
                 public boolean test(TagKey<EntityType<?>> entityTypeTagKey) {
-                    return entityTypeTagKey.equals(ModTags.EntityTypes.CELESTIAL_BRONZE_SWORD_TARGETS);
+                    return entityTypeTagKey.equals(ModTags.EntityTypes.MONSTER_HUNTING_SWORD_TARGETS);
                 }
             });
 

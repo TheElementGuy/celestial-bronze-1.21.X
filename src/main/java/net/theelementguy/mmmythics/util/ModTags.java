@@ -44,7 +44,7 @@ public class ModTags {
 
     public static class EntityTypes {
 
-        public static TagKey<EntityType<?>> CELESTIAL_BRONZE_SWORD_TARGETS = createTag("celestial_bronze_sword_targets");
+        public static TagKey<EntityType<?>> MONSTER_HUNTING_SWORD_TARGETS = createTag("celestial_bronze_sword_targets");
 
         private static TagKey<EntityType<?>> createTag(String name) {
             return TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.fromNamespaceAndPath(CelestialBronzeMod.MOD_ID, name));
