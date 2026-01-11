@@ -23,6 +23,14 @@ repositories {
     maven {
         url "https://cursemaven.com"
     }
+
+    maven {
+        url = uri("https://maven.pkg.github.com/theelementguy/material-lib")
+        credentials {
+            username = project.findProperty("gpr.user") ?: System.getenv("GITHUB_ACTOR")
+            password = project.findProperty("gpr.key") ?: System.getenv("GITHUB_TOKEN")
+        }
+    }
 }
 
 base {
@@ -135,8 +143,10 @@ dependencies {
     // implementation project(":myproject")
 
     // Do NOT use 'implementation' for mod dependencies that register content!
-    compileOnly "curse.maven:theelementguys-more-metals-1159383:7095146"
-    localRuntime "curse.maven:theelementguys-more-metals-1159383:7095146"
+    compileOnly "curse.maven:theelementguys-more-metals-1159383:7444197"
+    localRuntime "curse.maven:theelementguys-more-metals-1159383:7444197"
+
+    api "com.github.theelementguy:material-lib:21.11.0.1-beta"
 
 
     // For more info:
