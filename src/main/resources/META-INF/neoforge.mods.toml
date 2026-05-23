@@ -96,6 +96,13 @@ side="BOTH"
 [[dependencies.mmmythics]]
 modId="tegmoremetals"
 type="required"
-versionRange="[7.0.0,)"
+versionRange="[26.1.0.0,)"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.mmmythics]]
+modId="tegmatlib"
+type="required"
+versionRange="[26.1.2.0,)"
 ordering="AFTER"
 side="BOTH"

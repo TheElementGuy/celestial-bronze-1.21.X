@@ -1,10 +1,10 @@
 package net.theelementguy.mmmythics;
 
+import com.github.theelementguy.tegmatlib.loot.TEGMatLibLootModifiers;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.theelementguy.mmmythics.item.ModItems;
-import net.theelementguy.mmmythics.loot.ModLootModifiers;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -51,7 +51,10 @@ public class CelestialBronzeMod {
 
         ModItems.register(modEventBus);
 
-        ModLootModifiers.register(modEventBus);
+		TEGMatLibLootModifiers lootModifiers = new TEGMatLibLootModifiers(CelestialBronzeMod.MOD_ID);
+		lootModifiers.registerModifiers(ModRegisters.LOOT_MODIFIERS);
+
+		ModRegisters.register(modEventBus);
 
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
